@@ -17,4 +17,12 @@ describe("Redux store integration tests", () => {
         expect(todo.text).toEqual("go walking");
         expect(todo.completed).toEqual(false);
     });
+
+    it("should toggle one Todo", () => {
+        store.dispatch(addTodo("go walking"));
+        store.dispatch(toggleTodo(1));
+
+        const todo = store.getState().todos.find((x) => x.id === 1);
+        expect(todo.completed).toEqual(true);
+    });
 });
