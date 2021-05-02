@@ -4,7 +4,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import App from "../../components/App";
 import rootReducer from "../../reducers";
-import { screen, render, fireEvent } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 
 const store = createStore(rootReducer);
 

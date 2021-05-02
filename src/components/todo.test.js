@@ -39,8 +39,12 @@ describe("<Todo/> Component unit tests", () => {
     });
 });
 
+// describe.only to run only this test suite
+// describe.skip to skip this test suite
 describe("<Todo /> Styling behaviour", () => {
     const mockFn = jest.fn();
+    // it.skip to skip a test
+    // it.only to run only this test
     it("should not have a linethrough style when Todo is incomplete", () => {
         const component = shallow(
             <Todo onClick={mockFn} completed={false} text="walk" />
@@ -48,6 +52,8 @@ describe("<Todo /> Styling behaviour", () => {
         expect(component.props().style).toEqual({ textDecoration: "none" });
     });
 
+    // place x in front of it to eXclude it
+    // place f in front of it to Focus on it
     it("should  have a linethrough style when Todo is complete", () => {
         const component = shallow(
             <Todo onClick={mockFn} completed={true} text="walk" />
