@@ -39,6 +39,8 @@
         ]
     },
     "devDependencies": {
-        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1"
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
+        "jsdom": "16.5.3",
+        "jsdom-global": "3.0.2"
     }
 }
